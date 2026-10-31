@@ -204,25 +204,6 @@ while (running) {
       }
       break;
 
-    case "5":
-      let deptQueryInput = prompt("Nhập tên phòng ban cần tìm kiếm:");
-      if (deptQueryInput === null) break;
-      let deptQuery = deptQueryInput.trim().toLowerCase();
-      let count = 0;
-      for (let i = 0; i < employees.length; i++) {
-        let emp = employees[i];
-        if (emp.department.toLowerCase().includes(deptQuery)) {
-          count++;
-          console.log(count + ". " + emp.employeeCode + " - " + emp.fullName + " - " + emp.department);
-        }
-      }
-      if (count === 0) {
-        console.log("Không tìm thấy nhân viên nào thuộc phòng ban");
-      } else {
-        console.log("Tìm thấy " + count + " nhân viên");
-      }
-      break;
-
     case "0":
       console.log("Kết thúc chương trình");
       running = false;
